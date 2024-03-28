@@ -4,7 +4,7 @@
     vim
     git
     pika-backup
-	   
+
     git
     curl
     google-chrome

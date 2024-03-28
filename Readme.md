@@ -5,7 +5,7 @@
 Not for the faint of heart:
 
 ```shell
-$ nix-shell -p curl --command "curl nix.fri.so | bash"
+$ nix-shell -p curl git --command "curl nix.fri.so | bash"
 ```
 
 Manual:
