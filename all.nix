@@ -3,6 +3,9 @@
   [
     vim
     git
+    obsidian
+
+    element-desktop
 
     curl
     google-chrome
@@ -10,12 +13,26 @@
 
     python3
     pipx
-  
+    nodejs_22 
 
-    jetbrains.idea-ultimate
+    jetbrains.idea-ultimate    
+
+    ansible    
+
+
+    gradle
+    tilix
+    
     borgmatic
     borgbackup
     
+    tailscale
+
+    # De Friso Specials
+    obsidian
+    pipx
+    syncthing
+    signal-desktop
 
   ];
 
@@ -26,7 +43,7 @@
   virtualisation.docker.enable = true;
 
  
-  users.defaultUserShell=pkgs.zsh; 
+ users.defaultUserShell=pkgs.zsh; 
 
    programs = {
    zsh = {
@@ -59,5 +76,6 @@
     options = "--delete-older-than 7d";
   };
 
+  services.tailscale.enable = true;
 
 }
