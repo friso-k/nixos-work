@@ -3,9 +3,7 @@
   [
     vim
     git
-    pika-backup
 
-    git
     curl
     google-chrome
     sshfs-fuse
@@ -15,7 +13,9 @@
   
 
     jetbrains.idea-ultimate
-
+    borgmatic
+    borgbackup
+    
 
   ];
 
