@@ -14,7 +14,9 @@
     python3
     pipx
     nodejs_22 
+    jdk17
 
+    thunderbird
     jetbrains.idea-ultimate    
 
     ansible    
