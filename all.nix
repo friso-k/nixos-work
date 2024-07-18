@@ -8,6 +8,8 @@
     element-desktop
 
     curl
+    wget
+
     google-chrome
     sshfs-fuse
 
@@ -79,5 +81,6 @@
   };
 
   services.tailscale.enable = true;
+  programs.gnupg.agent.enable = true;
 
 }
