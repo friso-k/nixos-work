@@ -4,6 +4,7 @@
     vim
     git
     obsidian
+    gedit
 
     element-desktop
 
@@ -37,7 +38,7 @@
     pipx
     syncthing
     signal-desktop
-
+    onlyoffice-bin_latest
   ];
 
   services.openssh = {
@@ -81,6 +82,8 @@
   };
 
   services.tailscale.enable = true;
+  services.syncthing.enable = true;
+
   programs.gnupg.agent.enable = true;
 
 }
