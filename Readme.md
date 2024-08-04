@@ -1,17 +1,36 @@
+# Nixos Setup 
+This is a basic nixos setup with everything included to get a developer going. Includes everything from note taking to frontend and backend development
 
+1. Install nixos on your system. See https://nixos.org/download/#nixos-iso.
+2. Get the Goodies
+	```shell
+	nix-shell -p vim git
+	sudo ln -s ~/nixos-config/all.nix /etc/nixos/all.nix
+	```
+	
+3. Link the configuration (include it). 
+	```shell
+	sudo vim /etc/nixos/configuration.nix
+	# Add ./all.nix to the imports block.
+	```
+	
+	The import block should look like this:
+	
+	```nix
+	imports = [
+    ./all.nix
+    ./hardware-configuration.nix
+	]
+	```
+	
+3. Make it your own.
+	```shell
+	cd ~/nixos-config/
+	rm -rf .git/
+	git init
+	
+	# Set your own remote
+	```
 
-
-## Getting Started
-Not for the faint of heart:
-
-```shell
-$ nix-shell -p curl git --command "curl nix.fri.so | bash"
-```
-
-Manual:
-```shell
-nix-shell -p vim git
-sudo ln -s ~/nixos-config/all.nix /etc/nixos/all.nix
-
-
-```
+## Backup & Restore
+ - Todo document. Consist of using borgmatic to create encrypted off-site backups.

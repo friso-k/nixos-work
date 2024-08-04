@@ -3,6 +3,8 @@
   [
     vim
     git
+    git-open
+
     obsidian
     gedit
 
