@@ -36,7 +36,6 @@
     tailscale
 
     # De Friso Specials
-    obsidian
     pipx
     syncthing
     signal-desktop
@@ -75,6 +74,7 @@
   };
 
 
+  
   # optimize & Garbage collect
   nix.settings.auto-optimise-store = true;
   nix.gc = {

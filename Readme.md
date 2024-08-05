@@ -5,12 +5,13 @@ This is a basic nixos setup with everything included to get a developer going. I
 2. Get the Goodies
 	```shell
 	nix-shell -p vim git
+    git clone https://github.com/friso-k/nixos-work.git ~/nixos-config
 	sudo ln -s ~/nixos-config/all.nix /etc/nixos/all.nix
 	```
 	
 3. Link the configuration (include it). 
 	```shell
-	sudo vim /etc/nixos/configuration.nix
+    sudo vim /etc/nixos/configuration.nix
 	# Add ./all.nix to the imports block.
 	```
 	
