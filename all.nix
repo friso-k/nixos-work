@@ -1,4 +1,5 @@
 { config, pkgs, ... } : {
+
     environment.systemPackages = with pkgs; 
   [
     vim
@@ -9,7 +10,7 @@
     gedit
 
     element-desktop
-
+ 
     curl
     wget
 
@@ -23,9 +24,11 @@
 
     thunderbird
     jetbrains.idea-ultimate    
+    qtpass
+    # pass
 
     ansible    
-
+    php
 
     gradle
     tilix
@@ -35,11 +38,16 @@
     
     tailscale
 
+    celluloid
+
     # De Friso Specials
     pipx
     syncthing
     signal-desktop
+    telegram-desktop
     onlyoffice-bin_latest
+
+    ffmpeg    
   ];
 
   services.openssh = {
@@ -47,9 +55,13 @@
   };
 
   virtualisation.docker.enable = true;
-
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
  
- users.defaultUserShell=pkgs.zsh; 
+  users.defaultUserShell=pkgs.zsh; 
+  users.extraGroups.docker.members = [ "frisok" ];
 
    programs = {
    zsh = {
@@ -87,5 +99,12 @@
   services.syncthing.enable = true;
 
   programs.gnupg.agent.enable = true;
+
+  # stupid but required by company policy
+
+  services.clamav = {
+    daemon.enable = true;
+    updater.enable = true;
+  };
 
 }
